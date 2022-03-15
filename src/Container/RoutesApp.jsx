@@ -1,25 +1,13 @@
 import React from 'react'
 import NavBar from '../components/NavBar/NavBar'
-import { useState } from 'react';
+import ItemContainerList from './ItemContainerList/ItemContainerList';
 
 function RoutesApp() {
-    const [count, setCount] = useState(0)
-    let condition = true
-   // console.log(`El resultado de ${condition ? 'verdadero'  : 'falso' } `)
-    
-    const obj = {
-    nombre : 'oswi',
-    apellido : 'mendez'
-    }
-    //const nombre = obj.nombre
-    //const apeliido = obj.apellido
 
-    const {nombre , apellido} = obj // desestructuracion
-    console.log (nombre)
     return (
     <>
         <NavBar/>
-
+        <ItemContainerList greeting='Bienvenidos a Tienda Mora'/>
     </>
     );
 }

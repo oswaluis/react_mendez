@@ -4,8 +4,8 @@ import  Nav  from "react-bootstrap/Nav"
 import  NavDropdown  from "react-bootstrap/NavDropdown"
 import './navBar.css'
 import logo from './logoMora.png'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import CartWidget from "../CartWidget/CartWidget"
+
 
 function NavBar() {
   return (
@@ -25,7 +25,7 @@ function NavBar() {
         </Nav>
         <Nav>
           <Nav.Link href="#deets"><a href="#">
-            <FontAwesomeIcon icon={faShoppingCart}/>
+            <CartWidget/>
             </a></Nav.Link>
         </Nav>
       </Navbar.Collapse>
