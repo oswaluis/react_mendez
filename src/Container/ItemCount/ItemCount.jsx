@@ -1,10 +1,12 @@
 import React from 'react'
 import { useState} from 'react'
 import './ItemCount.css'
+import { stock } from '../../data/productos';
+
 
 function ItemCount() {
     const inicio = 1;
-    const stockProducto = 9;
+    const  stockProducto =9;
 
     const [contador, setContador] = useState (inicio);
     const agg = (contador)=> {alert (`agregaste ${contador} al carrito`)}

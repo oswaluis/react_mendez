@@ -1,5 +1,5 @@
-.titulo{
-    font-size: 1.5rem;
-    color:  #8c0327;
-    padding-top: 16px;
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 10px;
 }

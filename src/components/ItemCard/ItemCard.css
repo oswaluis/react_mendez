@@ -1,0 +1,10 @@
+.cartas{
+    height: auto;
+    width: 300px;
+    border: 2px solid black;
+    margin: 10px 10px;
+} 
+.imgCard{
+
+    width: 85%;
+}
