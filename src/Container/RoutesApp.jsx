@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar/NavBar'
 import Titulo from '../components/Titulo/Titulo';
 import ItemContainerList from './ItemContainerList/ItemContainerList';
 import ItemCount from './ItemCount/ItemCount';
+import ItemDetailContainer from './itemDetailContainer/ItemDetailContainer';
 
 function RoutesApp() {
 
@@ -22,7 +23,11 @@ function RoutesApp() {
                 element={<ItemContainerList 
                 />}
             />   
-        
+            
+            <Route
+                path='/detalle/:detalleId'
+                element={<ItemDetailContainer/>}
+            />
         </Routes>
     </BrowserRouter>
     );
