@@ -19,9 +19,9 @@ function NavBar() {
           <NavLink to='/QuienesSomos'>Quienes Somos</NavLink>
           <NavLink to='/Ofertas'>Ofertas</NavLink>
           <NavDropdown title="Productos" id="collasible-nav-dropdown">
-            <NavDropdown.Item><NavLink to='/productos/camisas'>Camisas</NavLink></NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Remeras</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Tops</NavDropdown.Item>
+            <NavDropdown.Item><NavLink to='/productos/camisa'>Camisas</NavLink></NavDropdown.Item>
+            <NavDropdown.Item> <NavLink to='/productos/remera'>Remeras</NavLink></NavDropdown.Item>
+            <NavDropdown.Item> <NavLink to='/productos/top'>Tops </NavLink></NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <Nav>

@@ -1,6 +1,7 @@
-import React from 'react'
-import ItemCard from '../../components/ItemCard/ItemCard'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import ItemList from '../../components/ItemList/ItemList'
+import { getFetchOne } from '../../data/getFetch'
 
 import './ItemContainerList.css'
 
@@ -19,13 +20,32 @@ const tarea = new Promise((resolve, reject)=>{
 
 function ItemContainerList(props) {
 
+    const [producto, setProducto] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const {productosId} = useParams()
+  
+    useEffect(()=>{
+    if(productosId){
+        getFetchOne
+        .then(resp =>setProducto(resp.filter(elem => elem.tipo === productosId)))
+        .catch(err =>console.log(err))
+        .finally(() => setLoading(false))
+    }else{
+        getFetchOne
+        .then(resp =>setProducto(resp))
+        .catch(err =>console.log(err))
+        .finally(() => setLoading(false))
+    }
+    
+    
+    },[productosId])
 
-
+    console.log(productosId)
     return (
         
         <div className='contenedor'>
         
-            <ItemList />
+            <ItemList producto= {producto} />
         </div>
     )
 }

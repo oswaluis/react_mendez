@@ -1,0 +1,11 @@
+.detalleProducto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #8c0327;
+}
+.detalleProducto ul{
+    margin-bottom: 30px;
+}
+

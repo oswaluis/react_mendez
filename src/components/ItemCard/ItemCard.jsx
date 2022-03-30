@@ -5,7 +5,7 @@ import { stock } from "../../data/productos"
 
 function ItemCard({stock}) {
     return (
-       <div className="productos">
+    <div className="productos">
         <div className="cartas container-fluid"  >
 							<img src={stock.img} className="imgCard" alt="..."/>
 							<div className="">
@@ -14,7 +14,7 @@ function ItemCard({stock}) {
 							<Link to={`/detalle/${stock.id}`}
 							id="botonCarr${cod}" className="btn btn-primary"> Detalle del producto
 							</Link>
-                            <ItemCount />
+
                             </div>  
 		</div>
         </div>
