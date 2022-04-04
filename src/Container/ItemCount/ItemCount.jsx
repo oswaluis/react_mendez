@@ -1,13 +1,11 @@
 import React from 'react'
 import { useState} from 'react'
+import Intercambiabilidad from '../../components/intercambiabilidad/Intercambiabilidad';
 import './ItemCount.css'
-import { stock } from '../../data/productos';
-
 
 function ItemCount() {
     const inicio = 1;
     const  stockProducto =9;
-
     const [contador, setContador] = useState (inicio);
     const agg = (contador)=> {alert (`agregaste ${contador} al carrito`)}
     const agregarProducto = (num) =>{
@@ -25,9 +23,10 @@ function ItemCount() {
             </button>
             <button className='botonContador' onClick={()=> agregarProducto(+1)} disabled={contador === stockProducto ? true : null}>+</button>
             </div>
-            <div >
+            {/* <div >
                 <button className='btnAgg' onClick={() => agg(contador)}>agregar</button>
-            </div>
+            </div> */}
+            <Intercambiabilidad />
         </div>
     )
 }

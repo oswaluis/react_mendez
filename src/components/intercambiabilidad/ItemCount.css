@@ -1,0 +1,27 @@
+.contenedorContador{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+
+
+}
+.botonContador{
+    width: auto;
+    background-color: #153959;
+    border: solid 1px ;
+    font-size: 1.3rem;
+    margin: 8px 6px;
+    color: #fff;
+}
+.numProducto{
+    font-size: 1.4rem;
+    color: #153959;
+    font-weight: 700;
+}
+
+.btnAgg{
+    background-color: #8c0327 ;
+    border: solid 1px;
+    width: auto;
+    color: #fff;
+}
