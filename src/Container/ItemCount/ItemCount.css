@@ -5,8 +5,16 @@
 
 
 }
-.botonContador{
+.botonContador1{
     width: 40px;
+    background-color: #153959;
+    border: solid 1px ;
+    font-size: 1.3rem;
+    margin: 8px 6px;
+    color: #fff;
+}
+.botonContador{
+    width: auto;
     background-color: #153959;
     border: solid 1px ;
     font-size: 1.3rem;

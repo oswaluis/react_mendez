@@ -3,7 +3,7 @@ import {BrowserRouter , Routes, Route} from 'react-router-dom'
 import Cart from '../components/Cart/Cart';
 import NavBar from '../components/NavBar/NavBar'
 import Titulo from '../components/Titulo/Titulo';
-import CartContextProvider, { CartContext } from '../context/CartContext';
+import CartContextProvider from '../context/CartContext';
 import ItemContainerList from './ItemContainerList/ItemContainerList';
 import ItemCount from './ItemCount/ItemCount';
 import ItemDetailContainer from './itemDetailContainer/ItemDetailContainer';
@@ -15,7 +15,7 @@ function RoutesApp() {
         <CartContextProvider>
             <NavBar/>
             <Titulo greeting='Bienvenidos a Tienda Mora'/>
-            <Routes> //los componentes que quiero que sean una pagina aparte
+            <Routes>
                 <Route
                     path='/contador'
                     element={  <ItemCount/>}

@@ -5,7 +5,7 @@ import './ItemCount.css'
 const EntradaContador = ()=> {
     return (
         <>
-          <Link to= '/Cart'>
+        <Link to= '/Cart'>
             <button className="botonContador"
                     onClick={()=>console.log("ir a Cart")}>
                 Ir al Carrito/ terminar compra
@@ -19,7 +19,7 @@ const EntradaContador = ()=> {
         </Link>
         
         </>
-      
+    
     )
 }
 

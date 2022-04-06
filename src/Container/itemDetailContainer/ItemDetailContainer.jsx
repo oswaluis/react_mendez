@@ -1,3 +1,4 @@
+import { faHourglass2 } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
@@ -20,8 +21,8 @@ function ItemDetailContainer() {
 
     return (
         <>
+            {loading ? <h2>Cargando...</h2> :<ItemDetail producto={producto} /> }
             
-            <ItemDetail producto={producto} />
         </>
     )
 }

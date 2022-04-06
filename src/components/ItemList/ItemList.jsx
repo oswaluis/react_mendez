@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{memo, useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import { getFetch, getFetchOne } from '../../data/getFetch'
 import { stock } from '../../data/productos'
@@ -6,9 +6,10 @@ import ItemCard from '../ItemCard/ItemCard'
 import './itemList.css'
 
 
+//memo(fn) fn=componente // memo(fn,FN) FN = funcion comparadora
 
-
-function ItemList({producto}) {
+const ItemList= memo(
+({producto})=> {
   const [productos , setProductos] = useState([]);
   // const [producto, setProducto] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -56,5 +57,6 @@ function ItemList({producto}) {
   }</>
   )
 }
+) 
 
 export default ItemList
