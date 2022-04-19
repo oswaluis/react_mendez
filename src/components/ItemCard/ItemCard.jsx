@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom"
-import ItemCount from "../../Container/ItemCount/ItemCount"
+
 import './ItemCard.css'
-import { stock } from "../../data/productos"
+
 
 function ItemCard({stock}) {
     return (
     <div className="productos">
         <div className="cartas container-fluid"  >
-							<img src={stock.img} className="imgCard" alt="..."/>
+							<img src={stock.foto} className="imgCard" alt="..."/>
 							<div className="">
 							<h5 className="">{stock.nombre}</h5>
 							<p className="">{stock.tipo}</p>

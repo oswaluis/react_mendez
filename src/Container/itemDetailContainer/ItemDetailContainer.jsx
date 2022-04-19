@@ -1,9 +1,8 @@
-import { faHourglass2 } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import  ItemDetail  from '../../components/itemDetail/ItemDetail'
-import { getFetch } from '../../data/getFetch'
+import { doc, getDoc, getFirestore } from 'firebase/firestore'
 
 
 function ItemDetailContainer() {
@@ -12,16 +11,18 @@ function ItemDetailContainer() {
     const {detalleId} = useParams()
 
     useEffect(()=>{
-        getFetch
-        .then(resp =>setProducto(resp.find(item => item.id === detalleId)))
-        .catch(err =>console.log(err))
-        .finally(() => setLoading(false))
-    
-    },[])
+        const querydb = getFirestore()
+        const queryProd = doc (querydb, 'productosDB', detalleId)
+
+        getDoc(queryProd)
+        .then(resp => setProducto ( { id: resp.id, ...resp.data()}))
+        .catch(err => console.log(err))
+        .finally(()=> setLoading(false))
+        } , [])
 
     return (
         <>
-            {loading ? <h2>Cargando...</h2> :<ItemDetail producto={producto} /> }
+            {loading ? <h2>A la espera de tu producto...</h2> :<ItemDetail producto={producto} /> }
             
         </>
     )

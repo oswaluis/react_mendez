@@ -1,14 +1,13 @@
 import React from 'react'
 import { useState} from 'react'
 import { Link } from 'react-router-dom';
-import Intercambiabilidad from '../../components/intercambiabilidad/Intercambiabilidad';
 import './ItemCount.css'
 
 
-function ItemCount({onAdd}) {
+function ItemCount({onAdd , producto}) {
     const [isOpen, setIsOpen] = useState(false)
     const inicio = 1;
-    const  stockProducto =9;
+    const  stockProducto =producto.stock;
     const [contador, setContador] = useState (inicio);
     // const agg = (contador)=> {alert (`agregaste ${contador} al carrito`)}
     const agregarProducto = (num) =>{

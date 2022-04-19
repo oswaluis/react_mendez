@@ -5,26 +5,18 @@ import { useCartContext } from '../../context/CartContext'
 
 
 function CartWidget() {
-    const {cantidadCart} = useCartContext()
+    const {cantidadTotalItem} = useCartContext()
     return (
+        
         <>
+        {cantidadTotalItem() !== 0 && `${cantidadTotalItem()} `}
         < FontAwesomeIcon  className="icono"
+            
             icon={faShoppingCart}
         />
         </>
-      
+    
     )
 }
 
 export default CartWidget
-
-  
-{/* <>
-{cantidadCart > 0 &&
-<>
-< FontAwesomeIcon  className="icono"
-    icon={faShoppingCart}/>
-    <h4>{cantidadCart} </h4>
-</>
-}
-</> */}
