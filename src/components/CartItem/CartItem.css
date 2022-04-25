@@ -1,0 +1,17 @@
+.contenedorCarrito{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+h3{
+    color: #153959;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.btnEliminarProducto{
+    background-color: #8c0327 ;
+    border: solid 1px;
+    width: auto;
+    color: #fff;
+}

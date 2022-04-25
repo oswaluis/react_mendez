@@ -31,7 +31,7 @@ function ItemContainerList() {
 
 
 
-    console.log(productosId)
+    
     return (
         
         <div className='contenedor'>

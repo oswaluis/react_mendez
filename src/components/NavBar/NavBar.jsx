@@ -12,16 +12,15 @@ function NavBar() {
   return (
     <Navbar className="navBar" collapseOnSelect expand="lg" bg="#e8b1a8" variant="light">
       <Container>
-      <Navbar.Brand><NavLink to='/'><img className="logo" src={logo}></img></NavLink></Navbar.Brand>
+      <Navbar.Brand><NavLink to='/'><img className="logo" src={logo} alt="logo"></img></NavLink></Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto " id="items">
-          <NavLink to='/QuienesSomos'>Quienes Somos</NavLink>
-          <NavLink to='/Ofertas'>Ofertas</NavLink>
           <NavDropdown title="Productos" id="collasible-nav-dropdown">
-            <NavDropdown.Item><NavLink to='/productos/camisa'>Camisas</NavLink></NavDropdown.Item>
+            <NavDropdown.Item><NavLink to='/productos/body'>body</NavLink></NavDropdown.Item>
             <NavDropdown.Item> <NavLink to='/productos/remera'>Remeras</NavLink></NavDropdown.Item>
-            <NavDropdown.Item> <NavLink to='/productos/top'>Tops </NavLink></NavDropdown.Item>
+            <NavDropdown.Item> <NavLink to='/productos/tops'>Tops </NavLink></NavDropdown.Item>
+            <NavDropdown.Item> <NavLink to='/productos/vestido'>Vestidos </NavLink></NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <Nav>

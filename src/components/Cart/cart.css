@@ -2,3 +2,59 @@
     font-size: 1.2rem;
     color: #8c0327;
 }
+
+.textoVacio{
+    color: #153959;
+    padding: 12px;
+}
+.textoFinalizar{
+    color: #153959;
+  font-size: 2rem ;
+}
+.btnVacio{
+    background-color: #8c0327 ;
+    border: solid 1px;
+    width: auto;
+    color: #fff;
+    margin-top: 30px;
+}
+
+.btnVaciar{
+    background-color: rgb(243, 33, 33) ;
+    border: solid 1px;
+    width: 126px;
+    color: #fff;
+}
+.btnPagar{
+    background-color: green ;
+    border: solid 1px;
+    width: 126px;
+    color: #fff;
+    padding: 12px;
+    
+}
+.btnGenerar{
+    background-color: green ;
+    border: solid 1px;
+    width: auto;
+    color: #fff;
+    
+    height: 60px;}
+.textoTotal{
+    color: #8c0327;
+    border:solid 1px #8c0327;
+    width: 240px;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+form{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+input{
+    margin: 6px;
+}

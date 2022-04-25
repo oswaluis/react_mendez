@@ -1,11 +1,15 @@
+
 .detalleProducto{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     font-size: 1.2rem;
     color: #8c0327;
+    align-items: center;
+    justify-content: center;
+
 }
 .detalleProducto ul{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 

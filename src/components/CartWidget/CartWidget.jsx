@@ -9,7 +9,8 @@ function CartWidget() {
     return (
         
         <>
-        {cantidadTotalItem() !== 0 && `${cantidadTotalItem()} `}
+        <span className='numeroCarr'>{cantidadTotalItem() !== 0 && `(${cantidadTotalItem()}) `}</span>
+        
         < FontAwesomeIcon  className="icono"
             
             icon={faShoppingCart}

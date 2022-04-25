@@ -8,15 +8,17 @@ import './itemDetail.css'
     const {addToCart} = useCartContext()
     
     function onAdd(cant){
-      console.log(cant)
+      
       addToCart({...producto, cantidad:cant})
     }
-     
 
     return (
+  
       <div className='detalleProducto'>
-      <ul>
-          <img className='detalleImg' src={producto.foto} alt="" width='200px'/>
+      <img className='detalleImg' src={producto.foto} alt="" width='200px'/>  
+      
+      <ul className='lista'>
+          
           <h2>Detalle del producto</h2>
           <li>Nombre: {producto.nombre}</li> 
           <li>Tipo: {producto.tipo}</li> 

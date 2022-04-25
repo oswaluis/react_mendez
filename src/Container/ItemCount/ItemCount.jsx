@@ -43,7 +43,7 @@ function ItemCount({onAdd , producto}) {
                             </button>
                         </Link>
                         <Link to= '/'>
-                            <button className="botonContador"
+                            <button className="botonContador2"
                                     >
                                 Seguir comprando
                             </button>

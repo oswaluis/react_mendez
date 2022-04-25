@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import CartItem from '../CartItem/CartItem'
 
 function Cart() {
-  const [datosCliente, setDatosCliente] = useState ({email:'', name:'', phone:'', email2:''})
+  const [datosCliente, setDatosCliente] = useState ({email:'', name:'', phone:'', confirmarEmail:''})
   const [id, setId] = useState ('')
   const {cartList , removeCart,  precioTotal} = useCartContext()
   const [pagar, setPagar] = useState (false)
@@ -18,7 +18,7 @@ function Cart() {
     let orden = {}
     orden.buyer = datosCliente
     orden.total = precioTotal ()
-
+    
     orden.items= cartList.map(cartItem =>{
       const id = cartItem.id
       const nombre = cartItem.nombre
@@ -58,26 +58,19 @@ function Cart() {
   const handleChange = (e) => {
     setDatosCliente({ ...datosCliente, [e.target.name]:e.target.value})
   }
-  console.log(datosCliente)
-  const validarEmail = () =>{
-    if(setDatosCliente.email !== setDatosCliente.email2){
-      alert('los email no coinciden')
-    }else{
-      alert('los email coinciden, puede continuar con su pedido')
-    }
-    
-  }
+ 
+
   return (
 
     <div>
       {cartList.length > 0 ? (
-        <h2>Termina tu compra</h2>
+        <h2  className='textoFinalizar'>Termina tu compra</h2>
       )
     :
       (<>
-        <h2>El carrito esta vacio</h2>
+        <h2 className='textoVacio'>El carrito esta vacio</h2>
           <Link to={'/'}>
-            <button>Ver productos</button>
+            <button className='btnVacio'>Ver productos</button>
           </Link>
       </>)}
 
@@ -88,22 +81,24 @@ function Cart() {
 
       {cartList.length > 0 &&
       <>
-        <h2>Total=${precioTotal()} </h2>
-        <button className='btn btn-warning' onClick={removeCart} >Vaciar Carrito</button><br/>
-        <button onClick={()=>{setPagar (true)}}> Ir a pagar</button>
+        <h2 className='textoTotal'>Total=${precioTotal()} </h2>
+        <button  className='btnVaciar' onClick={removeCart} >Vaciar Carrito</button><br/>
+        <button onClick={()=>{setPagar (true)}} className='btnPagar'> Ir a pagar</button>
       </>}
-
+      <>
       {pagar &&
       <form onSubmit={generarOrden}>
       <input
         type='text'
         name='name'
         placeholder='nombre'
+        errorMessage='Nombre debe tener solo entre 3 y 16 letras'
         value={datosCliente.name}
         onChange={handleChange}
         /><br/>
+        
       <input
-        type='text'
+        type='number'
         name='phone'
         placeholder='telefono'
         value={datosCliente.phone}
@@ -118,15 +113,24 @@ function Cart() {
         /><br/> 
       <input
         type='email'
-        name='email2'
+        name='confirmarEmail'
         placeholder='repetir email'
-        value={datosCliente.email2}
+        errorMessage='Los Email deben ser iguales'
+        value={datosCliente.confirmarEmail}
         onChange={handleChange}
+        pattern={datosCliente.email}
+        required={true}
         /><br/> 
-        <button onClick={validarEmail}> generar orden </button>
-        {id.length !== '' && `el Id de su cumpra es: ${id}` }
-    </form>
-      }
+        
+        <button> generar orden </button>
+        <br />
+        <>
+      <span>{id.length !== '' && `el Id de su cumpra es: ${id}` }</span>
+      </>
+        
+    </form> 
+      } </> 
+      
 </div>
 
 
@@ -138,4 +142,3 @@ function Cart() {
 
 
 export default Cart
-

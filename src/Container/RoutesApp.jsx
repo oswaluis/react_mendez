@@ -1,6 +1,7 @@
 import React from 'react'
 import {BrowserRouter , Routes, Route} from 'react-router-dom'
 import Cart from '../components/Cart/Cart';
+import Form from '../components/Formulario/Form';
 import NavBar from '../components/NavBar/NavBar'
 import Titulo from '../components/Titulo/Titulo';
 import CartContextProvider from '../context/CartContext';
@@ -15,6 +16,7 @@ function RoutesApp() {
         <CartContextProvider>
             <NavBar/>
             <Titulo greeting='Bienvenidos a Tienda Mora'/>
+          
             <Routes>
                 <Route
                     path='/contador'
